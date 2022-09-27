@@ -1,0 +1,195 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 572
+  ClientWidth = 661
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 40
+    Top = 216
+    Width = 23
+    Height = 13
+    Caption = 'C'#243'd:'
+  end
+  object Label2: TLabel
+    Left = 40
+    Top = 264
+    Width = 34
+    Height = 13
+    Caption = 'Raz'#227'o:'
+  end
+  object Label3: TLabel
+    Left = 40
+    Top = 360
+    Width = 23
+    Height = 13
+    Caption = 'C'#243'd:'
+  end
+  object Label4: TLabel
+    Left = 40
+    Top = 408
+    Width = 31
+    Height = 13
+    Caption = 'Nome:'
+  end
+  object Label5: TLabel
+    Left = 40
+    Top = 456
+    Width = 23
+    Height = 13
+    Caption = 'CPF:'
+  end
+  object Label6: TLabel
+    Left = 40
+    Top = 312
+    Width = 25
+    Height = 13
+    Caption = 'CNPJ'
+  end
+  object Label7: TLabel
+    Left = 248
+    Top = 315
+    Width = 28
+    Height = 13
+    Caption = 'E-mail'
+  end
+  object TxtFonel: TLabel
+    Left = 248
+    Top = 456
+    Width = 24
+    Height = 13
+    Caption = 'Fone'
+  end
+  object txtcodfor: TEdit
+    Tag = 1
+    Left = 40
+    Top = 237
+    Width = 73
+    Height = 21
+    TabOrder = 0
+    Text = '1'
+  end
+  object txtrazao: TEdit
+    Left = 40
+    Top = 285
+    Width = 305
+    Height = 21
+    TabOrder = 1
+  end
+  object txtcnpj: TEdit
+    Left = 40
+    Top = 331
+    Width = 161
+    Height = 21
+    TabOrder = 2
+  end
+  object txtcod: TEdit
+    Tag = 1
+    Left = 40
+    Top = 379
+    Width = 73
+    Height = 21
+    TabOrder = 3
+    Text = '1'
+  end
+  object txtnome: TEdit
+    Left = 40
+    Top = 427
+    Width = 305
+    Height = 21
+    TabOrder = 4
+  end
+  object txtcpf: TEdit
+    Left = 40
+    Top = 475
+    Width = 161
+    Height = 21
+    TabOrder = 5
+  end
+  object BitBtn1: TBitBtn
+    Left = 410
+    Top = 470
+    Width = 105
+    Height = 32
+    Caption = 'Cad. Cli'
+    TabOrder = 6
+    OnClick = BitBtn1Click
+  end
+  object BitBtn2: TBitBtn
+    Left = 410
+    Top = 326
+    Width = 105
+    Height = 32
+    Caption = 'Cad. Forn'
+    TabOrder = 7
+    OnClick = BitBtn2Click
+  end
+  object TxtEmail: TEdit
+    Left = 243
+    Top = 331
+    Width = 161
+    Height = 21
+    TabOrder = 8
+  end
+  object TxtFone: TEdit
+    Left = 243
+    Top = 475
+    Width = 161
+    Height = 21
+    TabOrder = 9
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 661
+    Height = 65
+    Align = alTop
+    Caption = 'Interface: Exemplo pr'#225'tico'
+    Color = clBtnShadow
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -24
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 10
+    ExplicitWidth = 612
+  end
+  object Memo1: TMemo
+    Left = 0
+    Top = 65
+    Width = 661
+    Height = 145
+    Align = alTop
+    Lines.Strings = (
+      '1- A Classe TCliente implementa a interface ICadastro'
+      ''
+      '2- A Classe TFornecedor implementa a interface ICadastro'
+      ''
+      
+        '3- A interface serve como par'#226'metro da fun'#231#227'o que cadastra o pro' +
+        'duto ou fornecedor.'
+      ''
+      
+        '4- A fun'#231#227'o recebe qualquer inst'#226'ncia de classe que implementa a' +
+        ' interface ICadastro.'
+      ''
+      
+        '5- Se hover outro tipo de cadastro, pode ser gerado outra classe' +
+        ' que implemente a interface que ser'#225' passado'
+      
+        'e implementado sem necessidade de alterar as outras funcionalida' +
+        'des j'#225' prontas')
+    TabOrder = 11
+  end
+end

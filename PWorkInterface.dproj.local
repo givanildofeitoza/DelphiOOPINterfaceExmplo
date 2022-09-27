@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/08/19 12:20:35.000.210,=C:\Users\givan\OneDrive\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/24 10:00:12.600,=C:\Users\Micro\OneDrive\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/24 10:19:36.518,C:\givanildo\DEV\Delphi-interface\WorkInterface.dfm=C:\Users\Micro\OneDrive\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/24 10:19:36.518,C:\givanildo\DEV\Delphi-interface\WorkInterface.pas=C:\Users\Micro\OneDrive\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/24 10:19:47.952,C:\givanildo\DEV\Delphi-interface\PWorkInterface.dproj=C:\Users\Micro\OneDrive\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/09/24 10:20:48.351,=C:\givanildo\DEV\Delphi-interface\Unit1.pas</Transaction>
+    <Transaction>2022/09/24 10:46:49.479,C:\givanildo\DEV\Delphi-interface\ICadastros.pas=C:\givanildo\DEV\Delphi-interface\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

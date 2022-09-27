@@ -1,0 +1,249 @@
+unit ICadastros;
+
+interface
+
+uses SysUtils, Vcl.Dialogs;
+
+type ICadastro = interface
+  ['{94332F7B-F77A-45CB-A594-764CE8500209}']
+
+  procedure SetCodigo   (const vCodigo      :integer);
+  procedure SetNome     (const SetNome      :string);
+  procedure SetDocumento(const SetDocumento :string);
+  procedure SetTipo     (const SetTipo      :string);
+
+  Function  GetCodigo    :integer;
+  Function  GetNome      :string;
+  Function  GetDocumento :string;
+  Function  GetTipo      :string;
+  Function  Validar():boolean;
+  Function  Cadastrar():boolean;
+
+  property  Codigo       : integer   read  GetCodigo    write SetCodigo;
+  property  Nome         : string    read  GetNome      write SetNome;
+  property  Documento    : string    read  GetDocumento write SetDocumento;
+  property  tipo         : string    read  GetTipo      write SetTipo;
+
+ end;
+
+type TFornecedor = Class(TInterfacedObject, ICadastro)
+  private
+   FCodigo     : integer;
+   FNome       : string;
+   FDocumento  : string;
+   FTipo       : string;
+   FEmail      : string;
+  public
+
+  procedure SetCodigo(const SetCodigo:integer);
+  procedure SetNome(const SetNome:string);
+  procedure SetDocumento(const SetDocumento:string);
+  procedure SetTipo(const SetTipo:string);
+
+  Function  GetCodigo    :integer;
+  Function  GetNome      :string;
+  Function  GetDocumento :string;
+  Function  GetTipo      :string;
+  Function  Validar():boolean;
+  Function  Cadastrar():boolean;
+
+  property Codigo   : integer   read  GetCodigo    write SetCodigo;
+  property Nome     : string    read  GetNome      write SetNome;
+  property Documento: string    read  GetDocumento write SetDocumento;
+  property tipo     : string    read  GetTipo      write SetTipo;
+  property Email    : string    read  FEmail      write FEmail;
+
+
+ end;
+
+
+type TCliente = Class(TInterfacedObject, ICadastro)
+private
+   FCodigo     : integer;
+   FNome       : string;
+   FDocumento  : string;
+   FTipo       : string;
+   FFone       : string;
+  public
+
+
+   procedure SetCodigo   (const SetCodigo      :integer);
+   procedure SetNome     (const SetNome      :string);
+   procedure SetDocumento(const SetDocumento :string);
+   procedure SetTipo     (const SetTipo      :string);
+
+   Function  GetCodigo    ():integer;
+   Function  GetNome      ():string;
+   Function  GetDocumento ():string;
+   Function  GetTipo      ():string;
+   Function  Validar():boolean;
+   Function  Cadastrar():boolean;
+
+  property Codigo   : integer   read  GetCodigo    write SetCodigo;
+  property Nome     : string    read  GetNome      write SetNome;
+  property Documento: string    read  GetDocumento write SetDocumento;
+  property tipo     : string    read  GetTipo      write SetTipo;
+  property Fone     : string    read  FFone        write FFone;
+
+ end;
+
+
+implementation
+{ TCliente }
+
+function TCliente.GetCodigo: integer;
+begin
+    Result:= FCodigo;
+end;
+
+function TCliente.GetDocumento: string;
+begin
+    Result:= FDocumento;
+end;
+
+function TCliente.GetNome: string;
+begin
+     Result:= FNome;
+end;
+
+function TCliente.GetTipo: string;
+begin
+     Result:= FTipo;
+end;
+Function  TCliente.Cadastrar():boolean;
+begin
+
+   ShowMessage('Cliente Cadastrado COm Sucesso!');
+
+end;
+
+Function TCliente.Validar():boolean;
+begin
+
+          if Fdocumento.Length <> 11 then
+          begin
+            ShowMessage('CPF inválido!');
+             Result:=False;
+          end;
+
+          if Fdocumento=string.Empty then
+          begin
+            ShowMessage('CPF está vazio!');
+             Result:=False;
+          end;
+
+          if FNome=string.Empty then
+          begin
+            ShowMessage('Nome está vazio!');
+             Result:=False;
+          end;
+
+          if FFone=string.Empty then
+          begin
+            ShowMessage('Telefone está vazio!');
+            Result:=False;
+          end;
+
+    Result:=True;
+
+end;
+
+procedure TCliente.SetCodigo(const SetCodigo: integer);
+begin
+     FCodigo:=SetCodigo;
+end;
+
+procedure TCliente.SetDocumento(const SetDocumento: string);
+begin
+    FDocumento:=SetDocumento;
+end;
+
+procedure TCliente.SetNome(const SetNome: string);
+begin
+   FNome:=SetNome;
+end;
+
+procedure TCliente.SetTipo(const SetTipo: string);
+begin
+   FTipo:=SetTipo;
+end;
+
+{ TFornecedor }
+function TFornecedor.GetCodigo: integer;
+begin
+   Result:= FCodigo;
+end;
+
+function TFornecedor.GetDocumento: string;
+begin
+   Result:= FDocumento;
+end;
+
+function TFornecedor.GetNome: string;
+begin
+   Result:= FNome;
+end;
+
+function TFornecedor.GetTipo: string;
+begin
+    Result:= FTipo;
+end;
+Function TFornecedor.Validar(): boolean;
+begin
+
+            if Fdocumento.Length <> 14 then
+            begin
+              ShowMessage('CNPJ inválido!');
+              Result:=False;
+            end;
+
+            if Fdocumento=string.Empty then
+            begin
+              ShowMessage('CNPJ está vazio!');
+              Result:=False;
+            end;
+
+            if FNome=string.Empty then
+            begin
+              ShowMessage('Nome está vazio!');
+               Result:=False;
+            end;
+
+            if FEmail=string.Empty then
+            begin
+              ShowMessage('Email está vazio!');
+              Result:=False;
+            end;
+
+
+    Result:=True;
+
+end;
+Function  TFornecedor.Cadastrar():boolean;
+begin
+
+   ShowMessage('Fornecedor Cadastrado COm Sucesso!');
+
+end;
+
+procedure TFornecedor.SetCodigo(const SetCodigo: integer);
+begin
+    FCodigo := SetCodigo;
+end;
+
+procedure TFornecedor.SetDocumento(const SetDocumento: string);
+begin
+       FDocumento:= SetDocumento;
+end;
+
+procedure TFornecedor.SetNome(const SetNome: string);
+begin
+      FNome:=  SetNome;
+end;
+
+procedure TFornecedor.SetTipo(const SetTipo: string);
+begin
+      FTipo:= SetTipo;
+end;
+
+end.
